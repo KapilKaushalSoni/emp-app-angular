@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FormsModule } from '@angular/forms';
+import { AddUserComponent } from './admin/manage-users/add-user/add-user.component';
+import { GetAllUsersComponent } from './admin/manage-users/get-all-users/get-all-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    AddUserComponent,
+    GetAllUsersComponent
   ],
   imports: [
     BrowserModule,

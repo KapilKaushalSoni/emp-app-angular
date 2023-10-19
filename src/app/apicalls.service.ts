@@ -6,7 +6,7 @@ import { HttpClient, HttpEvent, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApicallsService {
-  readonly url: string = "https://localhost:44312/api";
+  readonly url: string = "http://localhost:8044/api";
 
   constructor(private httpClient: HttpClient) { }
 
