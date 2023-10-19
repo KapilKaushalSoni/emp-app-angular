@@ -1,0 +1,31 @@
+<form (ngSubmit)="saveFunction()">
+        <div class="alert alert-success">Registration Form</div>
+        <div class="row">
+            <div class="col-3 offset-5">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="fname" name="fname"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-5">
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="lname" name="lname"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-5">
+                <div class="form-group">
+                  {{newid}}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-3 offset-5">
+                    <button type="submit" class="btn btn-primary">Save Details</button>
+            </div>
+        </div>
+</form>
