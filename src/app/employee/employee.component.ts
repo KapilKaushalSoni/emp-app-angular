@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApicallsService } from '../apicalls.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -11,7 +12,7 @@ export class EmployeeComponent {
   lname!: string;
   newid!:string;
   emp: any;
-  constructor(private apiservice: ApicallsService) {
+  constructor(private apiservice: ApicallsService,private router: Router ) {
 
   }
   saveFunction() {
@@ -19,6 +20,7 @@ export class EmployeeComponent {
     this.apiservice.save_employee(this.emp)
       .subscribe(p => {
         this.newid=p.id;
+        this.router.navigate(['admin/add-user']);
         console.log(p);
       })
   }

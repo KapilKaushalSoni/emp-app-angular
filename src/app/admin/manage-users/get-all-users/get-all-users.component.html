@@ -1,1 +1,24 @@
-<p>get-all-users works!</p>
+<div class="container mt-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Mobile No</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of users">
+                <td>{{item.id}}</td>
+                <td>{{item.first_Name}}</td>
+                <td>{{item.middle_Name}}</td>
+                <td>{{item.last_Name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.mobileNo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
