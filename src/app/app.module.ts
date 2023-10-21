@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './admin/manage-users/add-user/add-user.component';
 import { GetAllUsersComponent } from './admin/manage-users/get-all-users/get-all-users.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login/login.component';
+import { AuthAppServiceService } from './auth-app-service.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EmployeeComponent,
     AddUserComponent,
     GetAllUsersComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthAppServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

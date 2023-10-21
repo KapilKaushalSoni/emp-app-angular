@@ -10,8 +10,12 @@ export class UsersService {
   constructor(private http: HttpClient) { }
   add_user(userData: any): Observable<any> {
     return this.http.post(this.url, userData);
-  } 
+  }
   get_all_user(): Observable<any> {
     return this.http.get("http://localhost:8001/api/CustomUsers/GetAllUser");
+  }
+
+  login_service(userData:any): Observable<any> {
+    return this.http.post("http://localhost:8001/api/Auth/Authenticate",userData);
   }
 }

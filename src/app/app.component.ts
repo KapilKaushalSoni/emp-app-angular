@@ -11,12 +11,16 @@ import { Router } from '@angular/router';
 
 export class AppComponent {
   title = 'first-app';
-  
-  constructor(private router: Router)
-  {
+
+  constructor(private router: Router) {
 
   }
-  functionOnWhichRedirectShouldHappen(){
+  functionOnWhichRedirectShouldHappen() {
     this.router.navigate(['/employee']);
+  }
+  logOutNow() {
+    localStorage.removeItem("token");
+    console.log(localStorage.getItem("token"));
+    this.router.navigate(['/login']);
   }
 }
