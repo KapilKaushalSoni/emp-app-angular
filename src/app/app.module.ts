@@ -10,6 +10,7 @@ import { GetAllUsersComponent } from './admin/manage-users/get-all-users/get-all
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login/login.component';
 import { AuthAppServiceService } from './auth-app-service.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,11 @@ import { AuthAppServiceService } from './auth-app-service.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthAppServiceService],
+  providers: [AuthAppServiceService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthAppServiceService,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
